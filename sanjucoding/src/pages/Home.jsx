@@ -90,14 +90,14 @@ const Home = () => {
           <div className="lg:w-full lg:h-auto items-center justify-center lg:flex-row flex flex-col lg:flex-nowrap flex-wrap lg:gap-0 gap-15 lg:mb-0 mb-20">
             <button
               onClick={() => navigate("/contact")}
-              className="hover:bg-orange-400 transition-all duration-300 ease-out px-5 py-3 active:scale-95 lg:px-10 lg:py-3 font-semibold border-2 border-orange-500 rounded-3xl mr-0 lg:mr-15  shadow-[0_0_60px_40px_rgba(0,0,0,0.75)]"
+              className="hover:bg-orange-400 transition-all duration-300 ease-out px-10 py-3 active:scale-95 lg:px-10 lg:py-3 font-semibold border-2 border-orange-500 rounded-3xl mr-0 lg:mr-15  shadow-[0_0_60px_40px_rgba(0,0,0,0.75)]"
             >
               Hire Me
             </button>
             <a
               href="/files/SanjeevkupanCV.pdf"
               download
-              className="bg-orange-400  transition-all duration-300 ease-out px-5 py-3 hover:bg-transparent font-semibold active:scale-95 border-2 border-orange-500 hover:border-orange-500 lg:px-10 lg:py-3 rounded-3xl  shadow-[0_0_60px_40px_rgba(0,0,0,0.75)]"
+              className="bg-orange-400  transition-all duration-300 ease-out px-10 py-3 hover:bg-transparent font-semibold active:scale-95 border-2 border-orange-500 hover:border-orange-500 lg:px-10 lg:py-3 rounded-3xl  shadow-[0_0_60px_40px_rgba(0,0,0,0.75)]"
             >
               Download CV
             </a>
