@@ -44,7 +44,7 @@ const Skills = () => {
     })
 
   return (
-    <div className="lg:h-[90%] lg:w-full h-auto w-full lg:px-20 lg:py-10 bg-gradient-to-b from-black via-purple-950 to-violet-900">
+    <div className="lg:h-auto lg:w-full h-auto w-full lg:px-20 lg:py-10 bg-gradient-to-b from-black via-purple-950 to-violet-900">
       <Title title={"Skills"} />
       <div className="lg:h-fit lg:w-full lg:px-0 px-5 h-auto w-full flex flex-wrap gap-6 lg:mb-0 mb-15 items-center justify-center mt-10">
         <div
