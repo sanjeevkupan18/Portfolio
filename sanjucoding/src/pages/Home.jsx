@@ -56,7 +56,7 @@ const Home = () => {
   return (
     <div
       ref={containerRef}
-      className="flex flex-col-reverse gap-2 items-center  lg:flex-row lg:justify-between lg:items-center h-auto lg:h-screen lg:w-full bg-gradient-to-b from-black via-purple-950 to-violet-900"
+      className="flex flex-col-reverse gap-2 items-center  lg:flex-row lg:justify-baseline lg:gap-20 lg:items-center h-auto lg:h-screen lg:w-full bg-gradient-to-b from-black via-purple-950 to-violet-900"
     >
       <div className="lg:w-[40%] lg:h-full px-8 lg:px-20 py-10 flex flex-col ml-0 lg:ml-15">
         <div className="mt-2 lg:mt-20">
@@ -106,10 +106,10 @@ const Home = () => {
       </div>
       <div
         ref={imageDivRef}
-        className="w-[70%] h-[20%] lg:w-[40%] lg:h-[70%] lg:mr-30  flex items-center justify-center"
+        className="w-[70%] h-[20%] lg:w-[38%] lg:h-[70%]  flex items-center justify-center"
       >
         <img
-          className="lg:h-full lg:w-full h-auto w-full transition-all duration-300 ease-out object-cover mt-20 lg:mt-0 aspect-square rounded-full lg:rounded-[50%] border-8 border-purple-500 shadow-[0_0_60px_30px_rgba(126,34,206,0.6)] hover:shadow-[0_0_60px_35px_rgba(0,0,0,0.7)]"
+          className="lg:h-full lg:w-full h-auto w-full transition-all duration-300 ease-out object-cover mt-20 lg:mt-0 aspect-square lg:aspect-square md:aspect-square rounded-full lg:rounded-[50%] border-8 border-purple-500 shadow-[0_0_60px_30px_rgba(126,34,206,0.6)] hover:shadow-[0_0_60px_35px_rgba(0,0,0,0.7)]"
           src="/images/Gemini_Generated_Image_gd0b2igd0b2igd0b.png"
           alt=""
         />
