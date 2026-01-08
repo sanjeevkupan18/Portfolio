@@ -4,21 +4,21 @@ const nodemailer = require("nodemailer");
 require("dotenv").config();
 
 const app = express();
-const PORT = 5001;
-
-const distPath = path.join(__dirname, "../sanjucoding/dist");
-
-// Serve public files like PDFs
-const publicPath = path.join(__dirname, "../sanjucoding/public");
-
-app.use(express.static(publicPath));
+const PORT = process.env.PORT || 5001;
 
 app.use(express.json());
 
-// Serve static files
+// Paths
+const distPath = path.join(__dirname, "../sanjucoding/dist");
+const publicPath = path.join(__dirname, "../sanjucoding/public");
+
+// Serve public assets (PDFs)
+app.use(express.static(publicPath));
+
+// Serve React build
 app.use(express.static(distPath));
 
-// Nodemailer transporter
+// Nodemailer
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
@@ -27,18 +27,19 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// API route to send email from contact form
+// Contact API
 app.post("/api/send", (req, res) => {
   const { first, last, email, text } = req.body;
 
   const mailOptions = {
-    from: email, // sender
-    to: process.env.EMAIL_USER, // your email
+    from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
+    to: process.env.EMAIL_USER,
+    replyTo: email,
     subject: `Contact Form Submission from ${first} ${last}`,
     text: `Name: ${first} ${last}\nEmail: ${email}\nMessage: ${text}`,
   };
 
-  transporter.sendMail(mailOptions, (err, info) => {
+  transporter.sendMail(mailOptions, (err) => {
     if (err) {
       console.error(err);
       return res.status(500).json({ message: "Failed to send email" });
@@ -58,5 +59,5 @@ app.get("*", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
