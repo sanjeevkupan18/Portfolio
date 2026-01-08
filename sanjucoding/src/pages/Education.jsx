@@ -30,7 +30,7 @@ const Education = () => {
     })
     
   return (
-    <div className="lg:h-[90%] lg:w-full h-auto w-full  bg-gradient-to-b from-black via-purple-950 to-violet-900 lg:px-20 lg:py-10">
+    <div className="lg:h-full lg:w-full h-auto w-full  bg-gradient-to-b from-black via-purple-950 to-violet-900 lg:px-20 lg:py-10">
       <Title title={"Education"} />
       <div className="lg:h-fit lg:w-full h-auto w-full items-center  mt-25 flex flex-col relative gap-4">
         <div

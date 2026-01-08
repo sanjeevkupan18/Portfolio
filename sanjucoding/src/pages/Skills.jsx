@@ -44,9 +44,9 @@ const Skills = () => {
     })
 
   return (
-    <div className="lg:h-auto lg:w-full h-auto w-full lg:px-20 lg:py-10 bg-gradient-to-b from-black via-purple-950 to-violet-900">
+    <div className="lg:h-auto lg:w-full h-auto w-full lg:px-20 lg:pt-10 lg:pb-20 bg-gradient-to-b from-black via-purple-950 to-violet-900">
       <Title title={"Skills"} />
-      <div className="lg:h-fit lg:w-full lg:px-0 px-5 h-auto w-full flex flex-wrap gap-6 lg:mb-0 mb-15 items-center justify-center mt-10">
+      <div className="lg:h-auto lg:w-full lg:px-0 lg:py-5 px-5 h-auto w-full flex flex-wrap gap-6 lg:mb-10 mb-25 items-center justify-center mt-10">
         <div
           ref={skilldivRef1}
           className="lg:h-[45%] lg:w-[45%] h-auto w-full border-2 border-violet-400 lg:px-10 px-5 lg:py-5 py-3 rounded-2xl shadow-[0_0_50px_10px_rgba(0,0,0,0.75)] transition-all duration-300 ease-out hover:shadow-[0_0_25px_15px_rgba(126,34,206,0.6)]"
